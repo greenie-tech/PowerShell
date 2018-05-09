@@ -1,5 +1,5 @@
 ﻿cls
-# formats direcotry names for my person movie collection
+# formats direcotry names for my personal movie collection
 
 #replace . with white space (directory)
 Get-ChildItem \\desktop-3\temp\~Sorted\Movies -Force | Where-Object {$_.PSisContainer -and $_.Name -notmatch "~"; } | Rename-Item -NewName {$_.fullname -replace "\."," "} 
